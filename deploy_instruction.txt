@@ -1,0 +1,28 @@
+--node version---
+v10.14.2
+
+
+--configs-----
+backend port: 8080
+frontend port: 3000
+db database: local
+
+
+
+--deploy instruction--
+
+Unzip the compressed file
+
+cd "coda global"
+
+yarn install
+
+DB_USER=<database_username> DB_PASS=<database_password> DB_NAME=<database_name> TABLE_NAME=<table_name> yarn dev
+
+visit http://localhost:3000/
+
+
+-----------examples of running cmd------
+
+eg: DB_USER=root DB_PASS=password DB_NAME=local TABLE_NAME=songs yarn dev
+eg: DB_USER=abc DB_PASS=xyz DB_NAME=test TABLE_NAME=songs yarn dev
